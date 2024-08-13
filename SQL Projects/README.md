@@ -3,6 +3,7 @@ En una universidad internacional en Japón, se llevó a cabo un estudio exhausti
 
 La salud mental de los estudiantes es un tema crucial en el entorno académico, y Japón, con su rica cultura y avanzada tecnología, proporciona un contexto interesante para analizar estos aspectos. A medida que profundicemos en los datos, buscaremos patrones, correlaciones y posibles áreas de intervención para mejorar el bienestar de los estudiantes.
    -----------------------------*/
+   
 /* -----------------------------
    Consignas del caso de Estudio
    -----------------------------*/
@@ -46,61 +47,3 @@ La salud mental de los estudiantes es un tema crucial en el entorno académico, 
 -- 10. Comparación entre estudiantes internacionales y domésticos:
 
 ¿Cuáles son las principales diferencias en el comportamiento, integración y preferencias entre estudiantes internacionales y domésticos (inter_dom)? ¿Qué variables destacan al comparar estos dos grupos?
-
-
-
-
---CREANDO BASE DE DATOS.  
-
-CREATE TABLE students (
-    inter_dom VARCHAR(50),
-    region VARCHAR(50),
-    gender VARCHAR(50),
-    academic VARCHAR(50),
-    age FLOAT,
-    age_cate FLOAT,
-    stay FLOAT,
-    stay_cate VARCHAR(50),
-    japanese FLOAT,
-    japanese_cate VARCHAR(50),
-    english FLOAT,
-    english_cate VARCHAR(50),
-    intimate VARCHAR(50),
-    religion VARCHAR(50),
-    suicide VARCHAR(50),
-    dep VARCHAR(50),
-    deptype VARCHAR(50),
-    todep VARCHAR(50),
-    depsev VARCHAR(50),
-    tosc VARCHAR(50),
-    apd VARCHAR(50),
-    ahome VARCHAR(50),
-    aph VARCHAR(50),
-    afear VARCHAR(50),
-    acs VARCHAR(50),
-    aguilt VARCHAR(50),
-    amiscell VARCHAR(50),
-    toas VARCHAR(50),
-    partner VARCHAR(50),
-    friends VARCHAR(50),
-    parents VARCHAR(50),
-    relative VARCHAR(50),
-    profess VARCHAR(50),
-    phone VARCHAR(50),
-    doctor VARCHAR(50),
-    reli VARCHAR(50),
-    alone VARCHAR(50),
-    others VARCHAR(50),
-    internet VARCHAR(50),
-    partner_bi VARCHAR(50),
-    friends_bi VARCHAR(50),
-    parents_bi VARCHAR(50),
-    relative_bi VARCHAR(50),
-    professional_bi VARCHAR(50),
-    phone_bi VARCHAR(50),
-    doctor_bi VARCHAR(50),
-    religion_bi VARCHAR(50),
-    alone_bi VARCHAR(50),
-    others_bi VARCHAR(50),
-    internet_bi VARCHAR(50)
-);
