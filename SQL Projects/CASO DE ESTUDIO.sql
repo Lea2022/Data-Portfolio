@@ -53,3 +53,14 @@ CREATE TABLE students (
     internet_bi VARCHAR(50)
 );
 
+
+--1- Distribución demográfica por género y región:
+--¿Cómo se distribuye la población de estudiantes por género y región de origen?
+--¿Hay alguna región con un predominio de un género específico?
+
+SELECT count(*),
+       region,
+       gender
+FROM public.students
+WHERE region IS NOT NULL AND gender IS NOT NULL
+GROUP BY region, gender;
