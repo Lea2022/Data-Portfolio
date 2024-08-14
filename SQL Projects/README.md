@@ -17,9 +17,10 @@ La salud mental de los estudiantes es un tema crucial en el entorno académico, 
    ¿Existe una relación significativa entre el nivel académico de los estudiantes y su dominio del idioma japonés?
    ¿Los estudiantes de posgrado tienden a tener un mayor conocimiento del idioma que los estudiantes de pregrado?
    
--- 3.Impacto de la duración de la estancia en Japón en la integración social:
+-- 3. Comportamiento de los estudiantes:
 
-¿Cómo afecta la duración de la estancia en Japón a la integración social de los estudiantes, medida por la cantidad de amigos y conexiones sociales?
+¿Cuántos estudiantes prefieren estar solos (alone_bi) frente a los que prefieren estar con otros (others_bi)?
+¿Cuál es la proporción de estudiantes que utilizan internet regularmente (internet_bi)?
 
 -- 4. Preferencias de comunicación y su relación con el uso de Internet:
 
