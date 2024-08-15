@@ -105,6 +105,9 @@ FROM students
 WHERE students IS NOT NULL
 GROUP BY others_bi;  --"No" 225/ "Yes" 17
 
+
+-----------------------------------------------------------------------------------------------------
+
 -- 4. Preferencias de comunicación y su relación con el uso de Internet:
 --¿Los estudiantes que prefieren comunicarse a través de llamadas telefónicas (phone_bi) tienden a usar menos Internet (internet_bi)?
 --¿Existe alguna correlación entre estos comportamientos? 
@@ -116,10 +119,36 @@ WHERE students IS NOT NULL
 GROUP BY phone_bi; -- promedio de uso de internet para estudiantes que NO usan telefono para comunicarse 12%
                    -- promedio de uso de internet para estudiantes que SI usan telefono para comunicarse 66%
 
---------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
+-- 5. Influencia del entorno familiar en la adaptación cultural:
+--¿Cómo influye el nivel de interacción con padres y familiares (parents_bi, relative_bi) en la adaptación cultural de los estudiantes
+--(medido por el conocimiento del idioma japonés y la categoría de interacción social)?
 
+SELECT 
+    parents_bi,        --Agrupamos por los niveles de interacción con padres.
+    relative_bi,       --Agrupamos por los niveles de interacción con  familiares.
+    AVG(japanese) AS dominio_idioma_japones,        -- promedio del conocimiento del idioma japonés para cada grupo
+    AVG(CASE WHEN friends_bi = 'Yes' THEN 1 ELSE 0 END) AS interactua_amigos,     --proporción de estudiantes que tienen amigos en cada grupo de interacción.
+    AVG(CASE WHEN others_bi = 'Yes' THEN 1 ELSE 0 END) AS interactua_con_otros    -- proporción de estudiantes que tienen relacion con otras personas en cada grupo de interacciónda. Dá otra perspectiva de la adaptación social.
+FROM students
+WHERE students IS NOT NULL
+GROUP BY parents_bi, relative_bi;
 
+--La estrategia es agrupar los datos según los niveles de interacción con padres y familiares y calcular el promedio de conocimiento del idioma japonés y alguna medida de la interacción social.
+"Yes" (Parents) y "Yes" (Relatives): 3.25
+"Yes" (Parents) y "No" (Relatives): 3.52
+"No" (Parents) y "Yes" (Relatives): 2.66
+"No" (Parents) y "No" (Relatives): 3.04
+
+--Los estudiantes que tienen interacción con sus padres, independientemente de si tienen interacción con otros familiares,
+--tienden a tener un mayor conocimiento del idioma japonés (3.25 y 3.52).
+
+--Los estudiantes que no tienen interacción con sus padres pero sí con otros familiares muestran un conocimiento menor del idioma japonés (2.66),
+--lo que sugiere que la interacción directa con los padres puede tener un mayor impacto en el aprendizaje del idioma.
+
+--Aquellos que no tienen interacción con padres ni con otros familiares aún tienen un nivel relativamente alto (3.04), lo que podría indicar que otros factores,
+--como la integración social o la motivación personal, también influyen.
 
 
 
