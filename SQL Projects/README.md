@@ -20,7 +20,6 @@ La salud mental de los estudiantes es un tema crucial en el entorno académico, 
 -- 3. Comportamiento de los estudiantes:
 
 ¿Cuántos estudiantes prefieren estar solos (alone_bi) frente a los que prefieren estar con otros (others_bi)?
-¿Cuál es la proporción de estudiantes que utilizan internet regularmente (internet_bi)?
 
 -- 4. Preferencias de comunicación y su relación con el uso de Internet:
 
@@ -32,20 +31,13 @@ La salud mental de los estudiantes es un tema crucial en el entorno académico, 
 
 -- 6. Comportamiento de los estudiantes según la categoría de estancia (stay_cate):
 
-¿Qué diferencias existen en el comportamiento y las preferencias de los estudiantes según su categoría de estancia (corta o larga)? ¿Se observan patrones distintos en su interacción social y uso de recursos?
+¿Qué diferencias existen en el comportamiento y las preferencias de los estudiantes según su categoría de estancia (corta o larga)? ¿Se observan patrones distintos en su interacción social?
 
 -- 7. Relación entre la edad y la adaptación a la vida en Japón:
 
-¿Cómo varía la adaptación a la vida en Japón (conocimiento del idioma, integración social) según la edad de los estudiantes? ¿Los estudiantes más jóvenes se adaptan más rápidamente que los mayores?
+¿Cómo varía la adaptación a la vida en Japón (conocimiento del idioma, integración social) según la edad de los estudiantes? 
 
--- 8. Correlación entre la integración profesional y el uso de Internet:
+-- 8.  Influencia de la religión en el comportamiento social:
 
-¿Existe una correlación entre la integración en el entorno profesional (professional_bi) y el uso de Internet? ¿Los estudiantes más conectados profesionalmente tienden a usar más o menos Internet?
+¿Qué influencia tiene la religiosidad (religion_bi) en el comportamiento social y la adaptación cultural de los estudiantes? 
 
--- 9.  Influencia de la religión en el comportamiento social:
-
-¿Qué influencia tiene la religiosidad (religion_bi) en el comportamiento social y la adaptación cultural de los estudiantes? ¿Existen diferencias significativas en la integración social entre estudiantes religiosos y no religiosos?
-
--- 10. Comparación entre estudiantes internacionales y domésticos:
-
-¿Cuáles son las principales diferencias en el comportamiento, integración y preferencias entre estudiantes internacionales y domésticos (inter_dom)? ¿Qué variables destacan al comparar estos dos grupos?
