@@ -218,11 +218,26 @@ FROM students
 WHERE students IS NOT NULL
 GROUP BY religion_bi;
 
+--El 46.7% de los estudiantes que no se identifican como religiosos reporta tener amigos.
+--El 67% de los estudiantes religiosos reporta tener amigos, lo que es significativamente más alto que entre los estudiantes no religiosos.
+--Solo un 5.3% de estos estudiantes interactúa con personas fuera de su círculo cercano de amigos.
+--Un 33.3% de los estudiantes religiosos interactúa con personas fuera de su círculo de amigos, lo que es considerablemente mayor que la proporción de estudiantes no religiosos.
 
+--Esto podría deberse a que la religión facilita la creación de redes sociales más amplias,
+--ofreciendo más oportunidades para la interacción social a través de actividades comunitarias, eventos religiosos y grupos de apoyo.
 
+SELECT 
+    religion_bi,
+    AVG(japanese) AS manejo_idioma
+FROM students
+WHERE students IS NOT NULL
+GROUP BY religion_bi;
 
+--Los estudiantes que no se identifican como religiosos tienen un promedio de 3.23 en el conocimiento del idioma japonés.
+--Los estudiantes religiosos tienen un promedio de 3.00 en el conocimiento del idioma japonés
+--Esto sugiere que, en promedio, los estudiantes religiosos tienen un nivel de conocimiento del idioma japonés ligeramente más bajo que sus pares no religiosos.
 
-
+----------------------------------------------------------------------------------------------------
 
 
 
