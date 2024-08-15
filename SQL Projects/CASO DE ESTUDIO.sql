@@ -113,7 +113,7 @@ GROUP BY others_bi;  --"No" 225/ "Yes" 17
 --¿Existe alguna correlación entre estos comportamientos? 
 SELECT 
     phone_bi,
-    AVG(CASE WHEN internet_bi = 'Yes' THEN 1 ELSE 0 END) AS proportion_using_internet
+    AVG(CASE WHEN internet_bi = 'Yes' THEN 1 ELSE 0 END) AS usan_internet_diario
 FROM students
 WHERE students IS NOT NULL
 GROUP BY phone_bi; -- promedio de uso de internet para estudiantes que NO usan telefono para comunicarse 12%
@@ -150,5 +150,30 @@ GROUP BY parents_bi, relative_bi;
 --Aquellos que no tienen interacción con padres ni con otros familiares aún tienen un nivel relativamente alto (3.04), lo que podría indicar que otros factores,
 --como la integración social o la motivación personal, también influyen.
 
+-----------------------------------------------------------------------------------
 
+--6. Comportamiento de los estudiantes según la categoría de estancia (stay_cate):
+--¿Qué diferencias existen en el comportamiento y las preferencias de los estudiantes según su categoría de estancia (corta o larga)?
+--¿Se observan patrones distintos en su interacción social?
 
+SELECT 
+    stay_cate,
+    AVG(CASE WHEN friends_bi = 'Yes' THEN 1 ELSE 0 END) AS interactua_amigos,
+    AVG(CASE WHEN alone_bi = 'Yes' THEN 1 ELSE 0 END) AS prefierensolos
+FROM students
+WHERE students IS NOT NULL
+GROUP BY stay_cate;
+
+--estadía larga: El 50% interactúa con amigos.
+--estadía corta: El 42.86% interactúa con amigos.
+--estadía media: El 51.72% interactúa con amigos.
+--Esto sugiere que una estancia más prolongada podría estar relacionada con una mayor integración social.
+
+--estadía larga (0.21): El 21.43% de los estudiantes de estancia larga prefiere estar solo.
+--estadía corta (0.33): El 32.65% de los estudiantes de estancia corta prefiere estar solo.
+--estadía media (0.19): El 18.97% de los estudiantes de estancia media prefiere estar solo.
+
+--Los estudiantes de estancia corta muestran la mayor preferencia por estar solos, lo que podría estar relacionado con una menor adaptación al entorno.
+--Los estudiantes de estancia larga y media tienen una menor tendencia a preferir la soledad, lo que sugiere una mayor integración social.
+
+------------------------------------------------------------------------------------------
