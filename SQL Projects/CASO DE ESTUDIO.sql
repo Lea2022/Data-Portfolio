@@ -177,3 +177,53 @@ GROUP BY stay_cate;
 --Los estudiantes de estancia larga y media tienen una menor tendencia a preferir la soledad, lo que sugiere una mayor integración social.
 
 ------------------------------------------------------------------------------------------
+
+-- 7. Relación entre la edad y la adaptación a la vida en Japón:
+
+--¿Cómo varía la adaptación a la vida en Japón (conocimiento del idioma, integración social) según la edad de los estudiantes? 
+
+
+SELECT 
+    age,
+    AVG(japanese) AS dominio_japones
+FROM students
+WHERE students IS NOT NULL
+GROUP BY age
+ORDER BY age;    --No se observa una relación clara entre la edad y el dominio del idioma. 
+
+
+SELECT 
+    age,
+    AVG(CASE WHEN friends_bi = 'Yes' THEN 1 ELSE 0 END) AS tienen_amigos,
+    AVG(CASE WHEN others_bi = 'Yes' THEN 1 ELSE 0 END) AS relacionan_con_otros
+FROM students
+WHERE students IS NOT NULL
+GROUP BY age
+ORDER BY age; 
+
+--Este análisis sugiere que la adaptación social de los estudiantes en Japón podría estar influenciada por su edad,
+--con mayores desafíos en los primeros años y una posible expansión de la red social en las etapas más avanzadas de su vida académica.
+
+--------------------------------------------------------------------------------
+
+
+-- 8. Influencia de la religión en el comportamiento social:
+--¿Qué influencia tiene la religiosidad (religion_bi) en el comportamiento social y la adaptación cultural de los estudiantes?
+
+SELECT 
+    religion_bi,
+    AVG(CASE WHEN friends_bi = 'Yes' THEN 1 ELSE 0 END) AS tienen_amigos,
+    AVG(CASE WHEN others_bi = 'Yes' THEN 1 ELSE 0 END) AS relacionan_con_otros
+FROM students
+WHERE students IS NOT NULL
+GROUP BY religion_bi;
+
+
+
+
+
+
+
+
+
+
